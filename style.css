@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(193,193,237);
+    background: linear-gradient(90deg, rgba(193,193,237,1) 14%, rgba(77,204,248,1) 57%);
+}
+
+.box{
+    background: white;
+    padding: 15px 40px 60px 40px;
+    transition: all ease-in-out 0.2s;
+}
+
+.box:hover{
+    box-shadow: 15px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.box h3{
+font-size: 1.25em;
+letter-spacing: 0.1em;
+font-weight: 500;
+margin-bottom: 5px;
+cursor:default;
+text-align: center;
+}
+
+.box #form #email{
+    width: 400px;
+    outline: none;
+    border: none;
+    border-bottom: 2px groove #333;
+    padding: 10px 0;
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+}
+.box #form #email::placeholder{
+    text-transform: uppercase;
+    opacity: 0.2;
+    transition: all ease-in-out 0.2s;
+}
+
+.box #form #email:hover::placeholder{
+    opacity: 1;
+}
+
+.box .inputBox{
+    position: relative;
+}
+
+.box .inputBox #text{
+    display: block;
+    color: #999;
+    font-weight: 500;
+    padding: 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75em;
+    cursor: default;
+}
+
+.box #form.invalid .inputBox::after{
+    content: "✕";
+    color: white;    
+    font-size: 1.1em;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF0000;
+    border-radius: 50%;
+}
+
+.box #form.valid .inputBox::after{
+    content: "✔";
+    color: white;    
+    font-size: 1.1em;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0CC143;
+    border-radius: 50%;
+}
+
+.box #form #submitButton{
+    margin-top: 15px;
+    padding:10px 15px;
+    outline: none;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 10px;
+    color: whitesmoke;
+    background: rgb(193,193,237);
+    background: linear-gradient(90deg, rgba(193,193,237,1) 35%, rgba(77,204,248,1) 78%);
+    transition: all ease-in-out 0.2s;
+}
+.box #form #submitButton:disabled{
+    opacity: 0.5;
+}
+
+.box #form #submitButton:enabled{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.box #form #submitButton:enabled:hover{
+    transform: translateY(-2px);
+}
